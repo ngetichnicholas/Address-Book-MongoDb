@@ -10,9 +10,13 @@ post = [
     {"_id": 2, "name": "Mark", "address": "Nairobi 46"}
 ]
 
-results = collection.find({"name":"Nick"})
+# results = collection.find({"name":"Nick"})
+results = collection.delete_one({"name":"Nick"})
+# results = collection.delete_many({})
 
-for result in results:
-    print(result)
+
+
+# for result in results:
+#     print(result)
 
 collection.insert_many(post)
